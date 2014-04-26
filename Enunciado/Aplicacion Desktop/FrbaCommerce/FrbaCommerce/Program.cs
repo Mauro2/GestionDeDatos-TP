@@ -15,7 +15,10 @@ namespace FrbaCommerce
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Bootstrapper.Register();
+
+            Application.Run(Bootstrapper.GetForm<Form1>());
         }
     }
 }
