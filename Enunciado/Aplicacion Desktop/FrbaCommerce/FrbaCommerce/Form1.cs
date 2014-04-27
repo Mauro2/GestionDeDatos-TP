@@ -36,6 +36,13 @@ namespace FrbaCommerce
             f.MdiParent = this;
             f.WindowState = FormWindowState.Maximized;
 
+            f.ControlBox = false;
+            f.MinimizeBox = false;
+            f.MaximizeBox = false;
+
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.ShowIcon = false;
+            f.Dock = DockStyle.Fill;
             f.Show();
         }
 
