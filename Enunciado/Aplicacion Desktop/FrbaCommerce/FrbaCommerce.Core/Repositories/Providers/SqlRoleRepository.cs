@@ -1,16 +1,16 @@
 ﻿namespace FrbaCommerce.Core.Repositories.Providers
 {
     using System;
-    using System.Configuration;
     using System.Data.SqlClient;
+    using FrbaCommerce.Core;
 
-    public class SqlRoleRepository : IRoleRepository
+    public class SqlRoleRepository : BaseRepository, IRoleRepository
     {
         #region IRoleRepository Members
 
         public void CreateRole(string role)
         {
-            using (SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["Default"].ConnectionString))
+            using (SqlConnection cnx = GetConnection())
             {
                 cnx.Open();
 

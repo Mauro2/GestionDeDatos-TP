@@ -16,17 +16,27 @@ namespace FrbaCommerce
         public Form1(Func<FormType, Form> formFactory)
         {
             _formFactory = formFactory;
+
             InitializeComponent();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _formFactory(FormType.AltaCliente).Show();
+            ShowForm(FormType.AltaCliente);
         }
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _formFactory(FormType.AltaRol).Show();
+            ShowForm(FormType.AltaRol);
+        }
+
+        private void ShowForm(FormType formType)
+        {
+            Form f = _formFactory(formType);
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
+
+            f.Show();
         }
     }
 }
