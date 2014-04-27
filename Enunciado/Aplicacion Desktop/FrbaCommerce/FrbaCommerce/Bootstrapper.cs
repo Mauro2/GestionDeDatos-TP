@@ -20,6 +20,7 @@
             var builder = new ContainerBuilder();
 
             builder.RegisterType<FrbaCommerce.Form1>();
+            builder.RegisterType<FrbaCommerce.ABM_Rol.Listado>().Keyed<Form>(FormType.ListadoRol);
             builder.RegisterType<FrbaCommerce.ABM_Rol.Form1>().Keyed<Form>(FormType.AltaRol);
             builder.RegisterType<FrbaCommerce.Abm_Cliente.Form1>().Keyed<Form>(FormType.AltaCliente);
 
@@ -41,6 +42,7 @@
 
     public enum FormType
     {
+        ListadoRol,
         AltaRol,
         AltaCliente,
         AltaEmpresa

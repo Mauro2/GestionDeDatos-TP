@@ -32,13 +32,17 @@
             this.toolStripMenuItemAltas = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.publicacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemAltas});
+            this.toolStripMenuItemAltas,
+            this.accionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(907, 24);
@@ -53,6 +57,7 @@
             this.toolStripMenuItemAltas.Name = "toolStripMenuItemAltas";
             this.toolStripMenuItemAltas.Size = new System.Drawing.Size(43, 20);
             this.toolStripMenuItemAltas.Text = "Altas";
+            this.toolStripMenuItemAltas.Click += new System.EventHandler(this.toolStripMenuItemAltas_Click);
             // 
             // rolesToolStripMenuItem
             // 
@@ -67,6 +72,27 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // accionesToolStripMenuItem
+            // 
+            this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.publicacionToolStripMenuItem,
+            this.compraToolStripMenuItem});
+            this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
+            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.accionesToolStripMenuItem.Text = "Acciones";
+            // 
+            // publicacionToolStripMenuItem
+            // 
+            this.publicacionToolStripMenuItem.Name = "publicacionToolStripMenuItem";
+            this.publicacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.publicacionToolStripMenuItem.Text = "Publicacion";
+            // 
+            // compraToolStripMenuItem
+            // 
+            this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.compraToolStripMenuItem.Text = "Compra";
             // 
             // Form1
             // 
@@ -91,6 +117,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAltas;
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem publicacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compraToolStripMenuItem;
     }
 }
 

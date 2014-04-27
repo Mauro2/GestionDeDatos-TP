@@ -27,7 +27,7 @@ namespace FrbaCommerce
 
         private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowForm(FormType.AltaRol);
+            ShowForm(FormType.ListadoRol);
         }
 
         private void ShowForm(FormType formType)
@@ -37,6 +37,11 @@ namespace FrbaCommerce
             f.WindowState = FormWindowState.Maximized;
 
             f.Show();
+        }
+
+        private void toolStripMenuItemAltas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
