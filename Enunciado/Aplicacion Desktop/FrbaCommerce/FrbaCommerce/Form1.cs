@@ -34,8 +34,7 @@ namespace FrbaCommerce
         {
             Form f = _formFactory(formType);
             f.MdiParent = this;
-            f.WindowState = FormWindowState.Maximized;
-
+            
             f.ControlBox = false;
             f.MinimizeBox = false;
             f.MaximizeBox = false;
